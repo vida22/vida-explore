@@ -7,7 +7,7 @@ import json
 import urllib
 
 #this is used for constructing URLs to google's APIS
-from googleapiclient.discovery import build
+#from googleapiclient.discovery import build
 
 #API_KEY='AIzaSyDAifcYJdaYsU50CCDhOndvWMGUjO1ax1M'
 
@@ -40,3 +40,8 @@ def hello():
 def page_not_found(e):
     """Return a custom 404 error."""
     return 'Sorry, nothing at this URL.', 404
+    
+@app.errorhandler(500)
+def application_error(e):
+   """Return a custom 500 error."""
+   return 'Sorry, unexpected error: {}'.format(e), 500
