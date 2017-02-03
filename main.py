@@ -9,11 +9,11 @@ import urllib
 #this is used for constructing URLs to google's APIS
 from googleapiclient.discovery import build
 
-API_KEY='AIzaSyDAifcYJdaYsU50CCDhOndvWMGUjO1ax1M'
+#API_KEY='AIzaSyDAifcYJdaYsU50CCDhOndvWMGUjO1ax1M'
 
 # This uses discovery to create an object that can talk to the 
 # fusion tables API using the developer key
-service = build('fusiontables', 'v1', developerKey=API_KEY)
+#service = build('fusiontables', 'v1', developerKey=API_KEY)
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
